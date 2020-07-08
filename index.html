@@ -11,20 +11,7 @@
 			height: 100%;
 		}
 	</style>
-	<script>
-		// update with the desired time to refresh the presentation (in minutes)
-		var refreshSeconds = 5;
-		
-		var timer=setInterval(function(){refreshFrame()}, refreshSeconds*1000);
-		function refreshFrame()
-		{
-			//var iframe = document.getElementById('presentFrame');
-			//var iframeURL = iframe.src;
-			//iframe.src = iframeURL;
-		}
-	</script>
-</head>
-<body>
+	
 	<div>
   <iframe id="chart" width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/t40aM1Piau7dZF6Sbny73pFbFc45UQvSVDlMBEDgESG7/htmlembed/sheet?gid=905851777&range=A1"></iframe>
   <script>
@@ -34,7 +21,9 @@ document.getElementById("chart").src="https://docs.google.com/spreadsheets/d/e/2
 }
 </script>
 </div>
-<iframe id="presentFrame" 
-	src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIaEp2JdsJVmMABEblFhVgwR8aEWnB4aCyZUZN4InlFxf4kRBmVoQOstw-BtiJ9lS1k3abAkCzP8cz/pubchart?oid=401311956&amp;format=image" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
+	
+</head>
+<body>
+
 </body>
 </html>
