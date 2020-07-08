@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Live Chart</title>
+  <title>Live Bids</title>
 	<style>
 		html, body {
 			background: white;
@@ -11,19 +11,20 @@
 			height: 100%;
 		}
 	</style>
-	
-	<div>
-  <iframe id="chart" width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIaEp2JdsJVmMABEblFhVgwR8aEWnB4aCyZUZN4InlFxf4kRBmVoQOstw-BtiJ9lS1k3abAkCzP8cz/pubchart?oid=401311956&amp;format=image"></iframe>
-  <script>
-window.setInterval("reloadIFrame();", 10000);
-function reloadIFrame() {
-document.getElementById("chart").src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIaEp2JdsJVmMABEblFhVgwR8aEWnB4aCyZUZN4InlFxf4kRBmVoQOstw-BtiJ9lS1k3abAkCzP8cz/pubchart?oid=401311956&amp;format=image";
-}
-</script>
-</div>
-	
+	<script>
+		// update with the desired time to refresh the presentation (in minutes)
+		var refreshSeconds = 5;
+		
+		var timer=setInterval(function(){refreshFrame()}, refreshSeconds*1000);
+		function refreshFrame()
+		{
+			var iframe = document.getElementById('presentFrame');
+			var iframeURL = iframe.src;
+			iframe.src = iframeURL;
+		}
+	</script>
 </head>
 <body>
-
+<iframe id="presentFrame" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTIaEp2JdsJVmMABEblFhVgwR8aEWnB4aCyZUZN4InlFxf4kRBmVoQOstw-BtiJ9lS1k3abAkCzP8cz/pubchart?oid=401311956&format=interactive" frameborder="0" width="100%" height="100%" allowfullscreen="true" mozallowfullscreen="true" webkitallowfullscreen="true"></iframe>
 </body>
 </html>
