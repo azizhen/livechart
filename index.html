@@ -13,9 +13,9 @@
 	</style>
 	<script>
 		// update with the desired time to refresh the presentation (in minutes)
-		var refreshMinutes = 30;
+		var refreshSeconds = 1;
 		
-		var timer=setInterval(function(){refreshFrame()}, refreshMinutes*60*1000);
+		var timer=setInterval(function(){refreshFrame()}, refreshSeconds*1000);
 		function refreshFrame()
 		{
 			var iframe = document.getElementById('presentFrame');
